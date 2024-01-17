@@ -140,13 +140,13 @@ export default {
       try {
         // Post contact data
         const responseContact = await axios.post(
-          "http://localhost:8000/api/contacts",
+          "http://localhost:3000/apistore/contacts",
           dataSend
         );
 
         // Post image data
         const responseImage = await axios.post(
-          "http://localhost:8000/api/images/upload",
+          "http://localhost:3000/apistore/images/upload",
           formData
         );
         

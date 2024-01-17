@@ -26,7 +26,7 @@
               <td>{{ contact.Email }}</td>
               <td>{{ contact.Phone }}</td>
               <td>{{ contact.Address }}</td>
-              <td><img :width="120" :src="'http://localhost:8000/api/images/' + contact.Image" alt=""></td>
+              <td><img :width="120" :src="'http://localhost:3000/apistore/images/' + contact.Image" alt=""></td>
               <!--<td><img :width="120" :src="'http://localhost:3000/build/uploads/img/' + contact.Image" alt=""></td>-->
               <td>
                 <div class="btn-group" role="group" aria-label="Button group name">
@@ -55,7 +55,7 @@ export default {
   methods: {
     //http://localhost/contacts/
     async consultContacts() {
-      await axios.get("http://localhost:8000/api/contacts")
+      await axios.get("http://localhost:3000/apistore/contacts")
         .then((response) => {
           console.log(response.data);
           this.contacts = response.data;
